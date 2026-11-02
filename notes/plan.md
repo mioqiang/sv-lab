@@ -10,9 +10,19 @@
 
 ## T1 的现成载体
 
-`D:\Vivado2024.2\AC880\mux2\mux2.srcs\`：
+原件在 `D:\Vivado2024.2\AC880\mux2\mux2.srcs\`（**那个目录只读，不要在里面改任何东西**）：
+
 - `sources_1\new\mux2.v` —— `assign out = (sel == 0) ? a : b;`
 - `sim_1\new\mux2_tb.v` —— 纯 `#20` 延时激励，**没有任何自检**
+
+**已复制到本仓库** `sv-lab\mux2\`，T1 就在这两个副本上改，不碰 Vivado 工程：
+
+```text
+mux2\mux2.v        （DUT，原样保留）
+mux2\mux2_tb.v     （旧 TB，留作对照）
+mux2\mux2_if.sv    ← 新建：interface + modport
+mux2\mux2_tb.sv    ← 新建：clocking block 驱动 + $error 自检
+```
 
 不用新造模块：把 TB 换成 interface + clocking + `$error` 版本，正好把第 4 章全部用上。
 
@@ -20,7 +30,7 @@
 
 ```powershell
 $bin = 'D:\Vivado2024.2\Vivado\2024.2\bin'
-cd <实验目录>
+cd C:\Users\jyd10\Desktop\question\sv-lab\mux2
 & "$bin\xvlog.bat" -sv mux2.v mux2_if.sv mux2_tb.sv
 & "$bin\xelab.bat" -sv mux2_tb -s sim_mux2
 & "$bin\xsim.bat" sim_mux2 -runall
