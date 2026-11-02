@@ -12,6 +12,7 @@ sv-lab/
 │   ├── toolchain.md     ← 本机工具链 + XSim 的 SV 支持矩阵（实测）+ 三个坑
 │   ├── progress.md      ← 学习进度（时间线 / 已有能力 / 下一段）
 │   └── plan.md          ← 当前阶段的任务表与验收标准
+├── mux2/                ← T1 的载体（从 AC880 复制的副本：mux2.v + 旧 TB）
 └── probe/               ← 仿真器能力探针（8 个特性各一条），换工具/Vivado 升级后重跑
     ├── p1_logic.sv … p8_covergroup.sv
     ├── probe.ps1        （第一版，有 BOM bug，留作对照）
