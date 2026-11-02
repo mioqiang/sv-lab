@@ -1,0 +1,15 @@
+# XSim / Vivado ??
+xsim.dir/
+*.log
+*.jou
+*.pb
+*.wdb
+*.vcd
+*.fst
+*.wcfg
+.Xil/
+vivado*.str
+vivado*.backup.*
+*.xpr.*
+# ???
+.vscode/
