@@ -6,7 +6,8 @@
 
 ```text
 sv-lab/
-├── README.md            ← 本文件
+├── README.md            ← 本文件（含红线）
+├── NEXT-SESSION.md      ← 新会话开场提示词（复制给新对话用）
 ├── notes/
 │   ├── toolchain.md     ← 本机工具链 + XSim 的 SV 支持矩阵（实测）+ 三个坑
 │   ├── progress.md      ← 学习进度（时间线 / 已有能力 / 下一段）
