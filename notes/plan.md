@@ -6,7 +6,7 @@
 |---|---|---|
 | **90 min** | **T1：把 `mux2_tb.v` 重写成 SV 版**——新建 `mux2_if.sv`（interface + modport）+ 新 TB（`clocking cb` 驱动、`$error` 自检） | ① `xvlog -sv` → `xelab -sv` → `xsim -runall` 三步通过<br>② 打印 `TEST PASSED`、退出码 0<br>③ 对比"用 / 不用 clocking block"的采样差一拍 |
 | **60 min** | **T2：第 5 章 OOP 开篇**（只读 5.1–5.3），把 T1 的激励封装成 `class Stim` | 能说清两件事：`Stim a=new(); Stim b=a;` 改 `b` 后 `a` 看不看得到；只声明不 `new` 就调方法报什么错 |
-| **60–90 min** | **T3：Vivado GUI 线**——在 `mux2.xpr` 里综合、看资源占用（器件 xc7z020clg484-2） | 综合通过 + 记录 LUT / FF / IO 三个数字 |
+| **60–90 min** | **T3：Vivado GUI 线**——先把整个 `AC880\mux2` **复制**到 `sv-lab\vivado\mux2\`，在副本上打开综合（**GUI 一打开工程就会写 `.cache`/`.hw`/`.jou`，等于动了原件**），器件 xc7z020clg484-2 | 综合通过 + 记录 LUT / FF / IO 三个数字 |
 
 ## T1 的现成载体
 
